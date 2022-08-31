@@ -21,14 +21,22 @@
 #include <bgfx/embedded_shader.h>
 
 // Shaders
-#include "shaders/vs_textured.bin.h"
-#include "shaders/fs_textured.bin.h"
-#include "shaders/vs_color_gradient.bin.h"
-#include "shaders/fs_color_gradient.bin.h"
-#include "shaders/vs_image_pattern.bin.h"
-#include "shaders/fs_image_pattern.bin.h"
-#include "shaders/vs_stencil.bin.h"
-#include "shaders/fs_stencil.bin.h"
+#define SHADER_NAME vs_textured
+#include "vg_shader.h"
+#define SHADER_NAME fs_textured
+#include "vg_shader.h"
+#define SHADER_NAME vs_color_gradient
+#include "vg_shader.h"
+#define SHADER_NAME fs_color_gradient
+#include "vg_shader.h"
+#define SHADER_NAME vs_image_pattern
+#include "vg_shader.h"
+#define SHADER_NAME fs_image_pattern
+#include "vg_shader.h"
+#define SHADER_NAME vs_stencil
+#include "vg_shader.h"
+#define SHADER_NAME fs_stencil
+#include "vg_shader.h"
 
 BX_PRAGMA_DIAGNOSTIC_IGNORED_MSVC(4706) // assignment within conditional expression
 
