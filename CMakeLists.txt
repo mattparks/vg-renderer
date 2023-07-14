@@ -43,13 +43,13 @@ file(GLOB_RECURSE _vg_renderer_fs_shaders
 file(GLOB_RECURSE _vg_renderer_vs_shaders
         ${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/vs_*.sc
         )
-compile_shader_to_header(
+bgfx_compile_shader_to_header(
         TYPE FRAGMENT
         SHADERS ${_vg_renderer_fs_shaders}
         VARYING_DEF ${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/varying.def.sc
         OUTPUT_DIR ${CMAKE_CURRENT_BINARY_DIR}/generated/src
         )
-compile_shader_to_header(
+bgfx_compile_shader_to_header(
         TYPE VERTEX
         SHADERS ${_vg_renderer_vs_shaders}
         VARYING_DEF ${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/varying.def.sc

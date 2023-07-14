@@ -479,7 +479,7 @@ inline Shape* Renderer::CreateShape(uint32_t flags)
 inline void Renderer::DestroyShape(Shape* shape)
 {
 	vg::destroyCommandList(m_Context, shape->m_CommandListRef.m_Handle);
-	BX_DELETE(m_Allocator, shape);
+	bx::deleteObject(m_Allocator, shape);
 }
 
 inline void Renderer::SubmitShape(Shape* shape)
